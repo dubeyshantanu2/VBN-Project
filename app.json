@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "VBN Official",
+    "slug": "vbnapex",
+    "version": "1.6",
+    "orientation": "portrait",
+    "icon": "./app/assets/images/icon.png",
+    "splash": {
+      "image": "./app/assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.navtech.io.vbn",
+      "buildNumber": "3",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Allow VBN to access your photos",
+        "NSCameraUsageDescription": "Allow VBN to access your camera",
+        "NSMicrophoneUsageDescription": "Allow VBN to access your microphone"
+      }
+    },
+    "plugins": [
+      "sentry-expo"
+    ],
+    "android": {
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./app/assets/images/icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.POST_NOTIFICATIONS"
+      ],
+      "package": "com.navtech.io.vbn",
+      "versionCode": 5
+    },
+    "web": {
+      "favicon": "./app/assets/images/favicon.png"
+    },
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "navtech-5i",
+            "project": "vbn-official",
+            "authToken": "c252008ed59840c78fbdb99a9115da3b1b0d70c86a694eca99d62bd3a5aa7e8e"
+          }
+        }
+      ]
+    }
+  }
+}
