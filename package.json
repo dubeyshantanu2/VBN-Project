@@ -22,7 +22,7 @@
     "@rneui/themed": "^4.0.0-rc.2",
     "@sentry/react-native": "^3.4.3",
     "await": "^0.2.6",
-    "axios": "^0.25.0",
+    "axios": "^0.33.0",
     "expo": "~44.0.0",
     "expo-application": "~4.0.1",
     "expo-checkbox": "~2.0.0",
